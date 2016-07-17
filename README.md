@@ -50,6 +50,7 @@ dataExtractor.py [filename.sc2replay|directory_of_sc2replay_files] [filename.csv
 * location_y - int - Y location in map coordinates where unit was created
 * owner - int - toon_id of the player who created this unit (see *players* table)
 * unit_type - string - Unit type created (larva, zealot, broodlord, etc.)
+* unit_id - int - ID of this unit purchase.  Unique to this game.  This plus game_hash uniquely identifies the purchase across all replays
 
 ### DEATHS TABLE
 * game_hash - string - Key in games table of in which game this unit death occurred
