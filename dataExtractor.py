@@ -51,6 +51,7 @@ units_bought_columns = {
     'location_y': 'int(11) NOT NULL',
     'unit_type': 'varchar(255) NOT NULL',
     'game_second': 'int(11) NOT NULL',
+    'unit_id': 'int(11) NOT NULL',
     'owner': 'INTEGER NOT NULL'
 }
 
@@ -252,7 +253,8 @@ def extract_file(in_path, out_path):
                 'location_y': evt.location[1],
                 'unit_type': evt.unit_type_name,
                 'game_second': evt.second,
-                'owner': evt.unit_controller.toon_id
+                'owner': evt.unit_controller.toon_id,
+                'unit_id': evt.unit_id
             }
 
             purchases.append(purchase_metadata)
