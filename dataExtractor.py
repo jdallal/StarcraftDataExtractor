@@ -179,7 +179,7 @@ class database:
                 VALUES ({1})
             '''.format( \
               (",".join([col for col,col_type in sorted(games_columns.iteritems())])), \
-              (",".join(['\'' + str(data) + '\'' for col,data in sorted(game.game_metadata.iteritems())]))))
+              (",".join(['\'' + str(data).replace("\'", "") + '\'' for col,data in sorted(game.game_metadata.iteritems())]))))
 
         for player in game.game_players:
             self.add_player(player, c)
