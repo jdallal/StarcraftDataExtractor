@@ -5,16 +5,16 @@ The StarcraftDataExtractor is a utility to create a database of events from Star
 
 ## REQUIREMENTS
 1.  python 2.7.x
-2.  sc2reader (latest) (pip install sc2reader)
+2.  sc2reader (ggtracker version) (https://github.com/ggtracker/sc2reader)
 3.  sqlite3 python module (should come by default)
 
 ## USAGE
 dataExtractor.py [filename.sc2replay|directory_of_sc2replay_files] [filename.csv|database.db]
 
   .sc2replay or directory required
-  
+
   .csv for diagnostic or single replay metaanalysis, .db for most cases
-  
+
   * Example 1 - output a single replay to a csv file (aggregated over all unit purchases): dataExtractor.py replay.sc2replay output.csv
   * Example 2 - output a single replay to a sqllite db: dataExtractor.py replay.sc2replay output.db
   * Example 3 - output a whole directory to a sqllite db: dataExtractor.py replay_dirs all_replays.db
@@ -28,7 +28,6 @@ dataExtractor.py [filename.sc2replay|directory_of_sc2replay_files] [filename.csv
 * team_1_hash - string - Hash of the first team playing.  Keyed to *teams* table primary key
 * team_2_hash - string - Hash of the second team playing.  Keyed to *teams* table primary key
 * winner_team_hash - string - Hash of the winning team.  Will be a duplicate of one of the previous 2.  Keyed to *teams* table primary key
-
 
 ### PLAYERS TABLE
 * clan - string - Clan tag for the player
