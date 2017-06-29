@@ -1,5 +1,5 @@
 # StarcraftDataExtractor #
-Copyright July 2016, Justin Dallal
+Copyright 2017, Justin Dallal
 
 The StarcraftDataExtractor is a utility to create a database of events from Starcraft 2 replays.  Support should be in place for WOL, HOTS, and LOTV replays.  Data will be inserted into a sqllite database (.db) file for each unit purchase, each unit death, location, and team, player, and game metadata like map, game length, player location, clan.  The database schema is designed in such a way to maximize the ability to extract out trends using BI utilities like Tableau.
 
@@ -58,5 +58,12 @@ dataExtractor.py [filename.sc2replay|directory_of_sc2replay_files] [filename.csv
 * location_x - int - X location in map coordinates where death occurred
 * location_y - int - Y location in map coordinates where death occurred
 * unit_id - int - ID of unit that died.  This plus the game_hash will create a unique match of which unit died and can be matched to the *purchases* table
+
+MIT License:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ###### Thanks to Greg, for never believing in me.
